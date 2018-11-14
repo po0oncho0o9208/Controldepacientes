@@ -9,235 +9,241 @@
 
     <include layout="@layout/menu_toolbar" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|top"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:gravity="start|top"
-        android:orientation="vertical"
-        android:padding="15dp">
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+
+            android:gravity="start|top"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+
+                    android:gravity="center"
+                    android:text="Fecha de registro:  "
+                    android:textColor="@color/blanco"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:text="00/00/0000"
+                    android:textColor="@color/blanco"
+                    android:textSize="20dp" />
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="start"
-
-                android:gravity="center"
-                android:text="Fecha de registro:  "
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/nombre"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/blanco"
-                android:textSize="20dp" />
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blanco"
+                android:hint="@string/ingresarnombre"
+                android:textColor="#ffffff"
+                android:windowSoftInputMode="adjustPan" />
 
             <TextView
-                android:id="@+id/fecha"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/edad"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/blanco"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:weightSum="3">
+
+                <Spinner
+                    android:id="@+id/spinnerdia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffffff"
+                    android:spinnerMode="dialog"
+                    android:textColor="#ffffff" />
+
+                <Spinner
+                    android:id="@+id/spinnermes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffffff"
+                    android:spinnerMode="dialog"
+                    android:textColor="#ffffff" />
+
+                <Spinner
+                    android:id="@+id/spinneraño"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffffff"
+                    android:spinnerMode="dialog"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="00/00/0000"
+                android:text="Genero:"
                 android:textColor="@color/blanco"
-                android:textSize="20dp" />
-        </LinearLayout>
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/nombre"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/blanco"
-            android:textStyle="bold" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/nombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/blanco"
-            android:hint="@string/ingresarnombre"
-            android:textColor="#ffffff"
-            android:windowSoftInputMode="adjustPan" />
+                <RadioButton
+                    android:id="@+id/rdbtnmasc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#ffffff"
+                    android:text="Masculino"
+                    android:textColor="@color/blanco" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/edad"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/blanco"
-            android:textStyle="bold" />
+                <RadioButton
+                    android:id="@+id/rdbtnfem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#ffffff"
+                    android:text="Femenino"
+                    android:textColor="@color/blanco" />
+            </RadioGroup>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:weightSum="3">
-
-            <Spinner
-                android:id="@+id/spinnerdia"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/estadicivil"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/blanco"
+                android:textStyle="bold" />
+
+
+            <Spinner
+                android:id="@+id/spinnerestadocivil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:backgroundTint="#ffffff"
+                android:gravity="center"
                 android:spinnerMode="dialog"
                 android:textColor="#ffffff" />
 
-            <Spinner
-                android:id="@+id/spinnermes"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#ffffff"
-                android:spinnerMode="dialog"
-                android:textColor="#ffffff" />
+                android:layout_marginTop="10dp"
+                android:text="@string/telefono"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/blanco"
+                android:textStyle="bold" />
 
-            <Spinner
-                android:id="@+id/spinneraño"
+            <EditText
+                android:id="@+id/telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blanco"
+                android:hint="@string/ingresatelefono"
+                android:inputType="number"
+                android:textColor="#ffffff"
+                android:windowSoftInputMode="adjustPan" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#ffffff"
-                android:spinnerMode="dialog"
-                android:textColor="#ffffff" />
-        </LinearLayout>
+                android:layout_marginTop="10dp"
+                android:text="@string/mail"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/blanco"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blanco"
+                android:hint="@string/ingresaemail"
+                android:inputType="textEmailAddress"
+                android:textColor="#ffffff"
+                android:windowSoftInputMode="adjustPan" />
 
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="Genero:"
-            android:textColor="@color/blanco"
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/rdbtnmasc"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/ocupacion"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/blanco"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ocupacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blanco"
+                android:hint="@string/ingresaocupacion"
+                android:textColor="#ffffff"
+                android:windowSoftInputMode="adjustPan" />
+
+            <CheckBox
+                android:id="@+id/alergiaschbx"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
                 android:buttonTint="#ffffff"
-                android:text="Masculino"
+                android:text="Alergias"
                 android:textColor="@color/blanco" />
 
-            <RadioButton
-                android:id="@+id/rdbtnfem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <EditText
+                android:id="@+id/alergiastxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#ffffff"
+                android:hint="¿cuales?"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/medidaschbx"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
                 android:buttonTint="#ffffff"
-                android:text="Femenino"
+                android:text="@string/medidas"
                 android:textColor="@color/blanco" />
-        </RadioGroup>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/estadicivil"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/blanco"
-            android:textStyle="bold" />
-
-
-        <Spinner
-            android:gravity="center"
-            android:id="@+id/spinnerestadocivil"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#ffffff"
-            android:spinnerMode="dialog"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/telefono"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/blanco"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/telefono"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/blanco"
-            android:hint="@string/ingresatelefono"
-            android:textColor="#ffffff"
-            android:windowSoftInputMode="adjustPan" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/mail"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/blanco"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/blanco"
-            android:hint="@string/ingresaemail"
-            android:textColor="#ffffff"
-            android:windowSoftInputMode="adjustPan" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/ocupacion"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/blanco"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/ocupacion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/blanco"
-            android:hint="@string/ingresaocupacion"
-            android:textColor="#ffffff"
-            android:windowSoftInputMode="adjustPan" />
-
-        <CheckBox
-            android:id="@+id/alergiaschbx"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="15dp"
-            android:buttonTint="#ffffff"
-            android:text="Alergias"
-            android:textColor="@color/blanco" />
-
-        <EditText
-            android:id="@+id/alergiastxt"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:backgroundTint="#ffffff"
-            android:hint="¿cuales?"
-            android:visibility="gone" />
-
-        <CheckBox
-            android:id="@+id/medidaschbx"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="15dp"
-            android:buttonTint="#ffffff"
-            android:text="@string/medidas"
-            android:textColor="@color/blanco" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -254,12 +260,38 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/blanco"
                 android:hint="@string/ingresaestatura"
+                android:inputType="number"
                 android:textColor="#ffffff"
                 android:windowSoftInputMode="adjustPan" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/Peso"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/blanco"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/peso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blanco"
+                android:hint="@string/ingresapeso"
+                android:inputType="number"
+                android:textColor="#ffffff"
+                android:windowSoftInputMode="adjustPan" />
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:id="@+id/botonregistrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="registrar" />
+
         </LinearLayout>
+    </ScrollView>
 
-
-    </LinearLayout>
 
 </RelativeLayout>

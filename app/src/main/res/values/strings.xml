@@ -22,4 +22,8 @@
     <string name="mail">E-mail</string>
     <string name="ingresaemail">Ingresa el E-mail</string>
     <string name="estadicivil">Estado civil</string>
+    <string name="Peso">Peso (Kg)</string>
+    <string name="ingresapeso">Ingresar peso</string>
+
+
 </resources>

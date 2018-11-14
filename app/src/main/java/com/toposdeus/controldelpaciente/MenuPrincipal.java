@@ -25,6 +25,7 @@ public class MenuPrincipal extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        ConexionSQLiteHelper conexionsql = new ConexionSQLiteHelper(this, "usuario", null, 1);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

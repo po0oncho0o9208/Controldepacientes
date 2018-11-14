@@ -31,6 +31,7 @@ public class NuevoRegistro extends AppCompatActivity implements View.OnClickList
     EditText nombreedtx, alergiasedtx;
     String[] fechadenacieminto = new String[3];
     RadioButton masc, fem;
+    String estadocivil;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,12 +52,13 @@ public class NuevoRegistro extends AppCompatActivity implements View.OnClickList
         spinner(this, R.id.spinnerdia, 0, dias("Dia"));
         spinner(this, R.id.spinnermes, 1, meses("Mes"));
         spinner(this, R.id.spinneraño, 2, años("Año"));
+        spinnerestado();
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
         Date date = new Date();
 
         String fecha = dateFormat.format(date);
-        TextView txfecha  = findViewById(R.id.fecha);
+        TextView txfecha = findViewById(R.id.fecha);
         txfecha.setText(fecha);
     }
 
@@ -138,5 +140,25 @@ public class NuevoRegistro extends AppCompatActivity implements View.OnClickList
             dias.add("" + i);
         }
         return dias;
+    }
+
+    private void spinnerestado() {
+        Spinner spinnera = findViewById(R.id.spinnerestadocivil);
+        ArrayAdapter<CharSequence> adaptadora = ArrayAdapter.createFromResource(getBaseContext(), R.array.estadosciviles, R.layout.item_spinner);
+        spinnera.setAdapter(adaptadora);
+        spinnera.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                } else {
+                }
+                estadocivil = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 }
