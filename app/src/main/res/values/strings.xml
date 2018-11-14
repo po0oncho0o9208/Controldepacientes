@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Control del paciente</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Control de pacientes</string>
+    <string name="nav_header_subtitle">mundogreen92@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="NuevoRegistro">Nuevo Registro</string>
+    <string name="Ajustes">Ajustes</string>
+    <string name="nombre">Nombre</string>
+    <string name="ingresarnombre">Ingresa el nombre del paciente</string>
+    <string name="edad">Fecha de nacimiento</string>
+    <string name="ingresaedad">Ingresa la edad del paciente</string>
+    <string name="ingresaocupacion">Ingresa la ocupacion del paciente</string>
+    <string name="ocupacion">Ocupacion</string>
+    <string name="telefono">Telefono</string>
+    <string name="ingresatelefono">Ingresar telefono a 10 digitos</string>
+    <string name="medidas">Medidas</string>
+    <string name="Estatura">Estatura (Cm)</string>
+    <string name="ingresaestatura">Ingresar estatura</string>
+    <string name="mail">E-mail</string>
+    <string name="ingresaemail">Ingresa el E-mail</string>
+    <string name="estadicivil">Estado civil</string>
+</resources>
